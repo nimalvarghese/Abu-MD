@@ -6,7 +6,7 @@ const DATABASE_URL = process.env.DATABASE_URL === undefined ? './database.db' : 
 module.exports = {
   VERSION: 'v1.0.0',
   BRANCH: "main",
-  STICKER_DATA: process.env.STICKER_DATA === undefined ? 'ABU;ABU MD' : process.env.STICKER_DATA,
+  STICKER_DATA: process.env.STICKER_DATA === undefined ? 'Nimuzz;Nimuzz' : process.env.STICKER_DATA,
   LOGS: toBool(process.env.LOGS) || true,
   IMGBB_KEY: ["76a050f031972d9f27e329d767dd988f","deb80cd12ababea1c9b9a8ad6ce3fab2","78c84c62b32a88e86daf87dd509a657a"],
   ALIVE: process.env.ALIVE || "https://telegra.ph/file/47842cf7d85784cb4e441.jpg Hey {sender}, I'm alive \n Uptime: {uptime}",
@@ -22,10 +22,10 @@ module.exports = {
       ? "^"
       : "^[.]",
   RMBG_KEY: process.env.RMBG_KEY || false,
-  PACKNAME: process.env.PACKNAME || "Abu",
+  PACKNAME: process.env.PACKNAME || "Nimuzz",
   WELCOME_MSG:
     process.env.WELCOME_MSG ||
-    "{pp}Hi @user Welcome to @gname\nYou're our @count/513 Members ",
+    "{pp}Hi @user *Honey Rose Bot* Welcome to @gname\nYou're our @count/513 Members ",
   GOODBYE_MSG: process.env.GOODBYE_MSG || "Hi @user It was Nice Seeing you",
   AUTHOR: process.env.AUTHOR || "Jsl",
   DATABASE: DATABASE_URL === './database.db' ? new Sequelize({ dialect: 'sqlite', storage: DATABASE_URL, logging: false }) : new Sequelize(DATABASE_URL, {dialect: 'postgres', ssl: true, protocol: 'postgres', dialectOptions: { native: true, ssl: { require: true, rejectUnauthorized: false },}, logging: false }),
